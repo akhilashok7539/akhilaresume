@@ -1188,6 +1188,12 @@ h6 {
     height: 100px;
 }
 
+@media screen and (max-width: 998px) {
+    .col-sm-3 {
+        margin-top: 10px;
+    }
+}
+
 @media screen and (max-width: 1200px) {
     .colorlib-feature .colorlib-icon i {
         font-size: 40px;
