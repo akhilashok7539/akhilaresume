@@ -312,7 +312,20 @@ figure figcaption {
 @media screen and (max-width: 768px) {
     #colorlib-main {
         width: 100%;
-        padding: 0 1em;
+        /* padding: 0 1em; remove the padding in mobile view */ 
+    }
+
+    .developerName {
+        text-align: left;
+    }
+
+    .developerResumeDownload {
+        text-align: left;
+        width: 126px;
+    }
+    .btn-download{
+        font-size: 8px !important;
+
     }
 }
 
@@ -321,7 +334,7 @@ figure figcaption {
     background: #fff url(../images/loader.gif) no-repeat center center;
     width: 100%;
     float: left;
-    margin-bottom: 10em;
+    /* margin-bottom: 10em; */
     clear: both;
 }
 
@@ -541,6 +554,7 @@ body.offcanvas .colorlib-nav-toggle {
 }
 
 @media screen and (max-width: 768px) {
+
     .colorlib-experience,
     .colorlib-skills,
     .colorlib-education,
@@ -1432,12 +1446,14 @@ h6 {
         opacity: 1;
         background: rgba(0, 0, 0, 0.4);
     }
+
     .project .desc h3 {
         font-style: 28px;
         -webkit-transform: translate3d(0, 0, 0);
         transform: translate3d(0, 0, 0);
         color: #000;
     }
+
     .project .desc span {
         -webkit-transform: translate3d(0, 0, 0);
         transform: translate3d(0, 0, 0);
