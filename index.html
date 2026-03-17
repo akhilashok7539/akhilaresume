@@ -59,7 +59,7 @@
                 aria-expanded="false" aria-controls="navbar"><i></i></a>
             <aside id="colorlib-aside" role="complementary" class="border js-fullheight">
                 <div class="text-center">
-                    <div class="author-img" style="background-image: url(images/17050.jpg);"></div>
+                    <div class="author-img" style="background-image: url(images/akhil.png);"></div>
                     <h1 id="colorlib-logo"><a href="index.html">Akhil Ashok </a></h1>
                     <span class="position"><a href="#">Technology Specialist</a></span>
                 </div>
@@ -104,7 +104,8 @@
                                             <div class="slider-text-inner js-fullheight">
                                                 <div class="desc">
                                                     <h1 class="developerName">Hi! <br>I'm Akhil</h1>
-                                                    <p class="developerResumeDownload"><a class="btn btn-primary btn-learn btn-download"
+                                                    <p class="developerResumeDownload"><a
+                                                            class="btn btn-primary btn-learn btn-download"
                                                             href="./pdf/AKHIL_ASHOK.pdf">Download CV <i
                                                                 class="icon-download4"></i></a></p>
                                                 </div>
@@ -143,9 +144,11 @@
                                             <span class="heading-meta">About Us</span>
                                             <h2 class="colorlib-heading">Who Am I?</h2>
                                             <p><strong>Hi I'm Akhil Ashok</strong> </p>
-                                            <p><strong> Experienced Developer:</strong> Over 5.9+ years of expertise in
+                                            <p><strong> Experienced Developer:</strong> Over <span
+                                                    id="experience"></span> years of expertise in
                                                 software
-                                                development, including 4+ years specializing in ReactJS, Angular,
+                                                development, including <span id="experience"></span> years specializing
+                                                in ReactJS, Angular,
                                                 Node.js, and modern web technologies.
                                             </p>
                                             <p>
@@ -572,8 +575,40 @@
                                             </div>
 
                                             <div class="timeline-label">
+                                                <h2>
+                                                    <a href="#">Staff Software Engineer / Team Lead at Vensure Employee
+                                                        Solutions</a>
+                                                    <span>AUG 2025 - Present</span>
+                                                </h2>
+                                                <p>
+                                                    Driving task planning, delegation,
+                                                    and delivery to meet project timelines.
+                                                    <br> Acting as a primary point of contact between stakeholders and
+                                                    the development team, ensuring clear and effective communication.
+                                                    <br> Analysing business requirements and translating them into
+                                                    detailed functional and technical specifications.
+                                                    <br> Providing technical leadership, guiding architecture decisions,
+                                                    and promoting best practices for scalable and reusable code.
+                                                    <br> Actively contributing to development, performing code reviews,
+                                                    and maintaining high-quality standards.
+                                                    <br> Collaborating with cross-functional teams to deliver efficient,
+                                                    reliable, and timely solutions.
+                                                    <br>supporting skill development, and
+                                                    fostering a collaborative work environment.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </article>
+                                    <article class="timeline-entry animate-box" data-animate-effect="fadeInLeft">
+                                        <div class="timeline-entry-inner">
+
+                                            <div class="timeline-icon color-2">
+                                                <i class="icon-pen2"></i>
+                                            </div>
+
+                                            <div class="timeline-label">
                                                 <h2><a href="#">Technology Analyst at Infosys Ltd</a>
-                                                    <span>JUNE 2021-present</span>
+                                                    <span>JUNE 2021- AUG 2025</span>
                                                 </h2>
                                                 <p>Analysed business needs and translated them into detailed functional
                                                     specifications.
@@ -584,7 +619,8 @@
                                                     <br> Served as a liaison between the client and team, ensuring clear
                                                     and effective communication.
                                                     <br> Provided design insights to optimize code reuse and scalability
-                                                    <br>Directed a team of 6, facilitating task allocation and monitoring progress. 
+                                                    <br>Directed a team of 6, facilitating task allocation and
+                                                    monitoring progress.
                                                     <br>
                                                 </p>
                                             </div>
@@ -593,7 +629,7 @@
                                     <article class="timeline-entry animate-box" data-animate-effect="fadeInLeft">
                                         <div class="timeline-entry-inner">
 
-                                            <div class="timeline-icon color-1">
+                                            <div class="timeline-icon color-2">
                                                 <i class="icon-pen2"></i>
                                             </div>
 
@@ -1117,6 +1153,26 @@
 
     <!-- MAIN JS -->
     <script src="js/main.js"></script>
+
+    <script>
+        function calculateExperience(startDate) {
+            const start = new Date(startDate);
+            const now = new Date();
+
+            let years = now.getFullYear() - start.getFullYear();
+            let months = now.getMonth() - start.getMonth();
+
+            if (months < 0) {
+                years--;
+                months += 12;
+            }
+
+            return `${years}.${Math.floor((months / 12) * 10)}+`;
+        }
+
+        document.getElementById("experience").innerText =
+            calculateExperience("2019-08-01");
+    </script>
 
 </body>
 
